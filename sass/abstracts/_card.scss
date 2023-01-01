@@ -1,0 +1,79 @@
+@use './variables' as *;
+
+.orange {
+	background: $bg-primary;
+	button {
+		color: $bg-primary;
+		&:hover {
+			background: $bg-primary;
+			border: 2px solid $clr-bghbtn;
+			color: $clr-bghbtn;
+		}
+	}
+}
+.cyan {
+	background: $bg-secondary;
+	button {
+		color: $bg-secondary;
+		&:hover {
+			background: $bg-secondary;
+			border: 2px solid $clr-bghbtn;
+			color: $clr-bghbtn;
+		}
+	}
+}
+.dcyan {
+	background: $bg-third;
+	button {
+		color: $bg-third;
+		&:hover {
+			background: $bg-third;
+			border: 2px solid $clr-bghbtn;
+			color: $clr-bghbtn;
+		}
+	}
+}
+
+.card {
+	width: min(100% - 2rem, $bp-sm);
+	aspect-ratio: 6 / 9;
+	color: $clr-paragraph;
+	padding: 2.3rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+
+	&__ico {
+		width: 3rem;
+	}
+	&__title {
+		padding: 1.3rem 0;
+		color: $clr-bghbtn;
+		font-size: 2rem;
+	}
+	&__text {
+		width: 26ch;
+		line-height: 1.8;
+	}
+	&__button {
+		width: fit-content;
+		border: 2px solid $clr-bghbtn;
+		background-color: $clr-bghbtn;
+		border: none;
+		margin: 2rem 0 1rem 0;
+		padding: 0.8rem 2rem;
+		border-radius: 2rem;
+	}
+	&:first-child {
+		border-radius: 0.8rem 0.8rem 0 0;
+		@media (min-width: 60rem) {
+			border-radius: 0.8rem 0 0 0.8rem;
+		}
+	}
+	&:last-child {
+		border-radius: 0 0 0.8rem 0.8rem;
+		@media (min-width: 60rem) {
+			border-radius: 0 0.8rem 0.8rem 0;
+		}
+	}
+}
